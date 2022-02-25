@@ -6,7 +6,20 @@ let symbolArr = ['?', '+', '-', '*', '/', '|', '*', '&', '^', '%', '$', '#', '@'
 
 
 // Generate Random Password Function
+function generatePassword () {
+  // Prompts asking password length and which chars to include
+  let lengthInput = parseInt(prompt('Choose the length of your password. Please enter a number between 8 and 128'));
+  if (lengthInput < 8 || lengthInput > 128) {
+    alert('Please enter a number between 8 and 128')
+  }  else {
+    alert(`Your password will be ${lengthInput} charactors long`)
+  }
 
+  let lowerCaseInput = confirm("Would you like to include lowercase charactors? Confirm = YES, Cancel = NO.")
+  let upperCaseInput = confirm('Would you like to include Uppercase charactors? Confirm = YES, Cancel = NO.')
+  let numberInput = confirm('Would you like to include numbers? Confirm = YES, Cancel = NO.')
+  let symbolInput = confirm('Would you like to include symbols? Confirm = YES, Cancel = NO.')
+}
 
 
 
