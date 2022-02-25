@@ -19,6 +19,28 @@ function generatePassword () {
   let upperCaseInput = confirm('Would you like to include Uppercase charactors? Confirm = YES, Cancel = NO.')
   let numberInput = confirm('Would you like to include numbers? Confirm = YES, Cancel = NO.')
   let symbolInput = confirm('Would you like to include symbols? Confirm = YES, Cancel = NO.')
+
+  // setting user inputs from confirm prompts to variables to be sent to array
+  let userInput = []
+
+  if (lowerCaseInput) {
+    userInput = userInput.concat(lowerCaseArr)
+  }
+  if (upperCaseInput) {
+    userInput = userInput.concat(upperCaseArr)
+  }
+  if (numberInput) {
+    userInput = userInput.concat(numberArr)
+  }
+  if (symbolInput) {
+    userInput = userInput.concat(symbolArr)
+  }
+
+  console.log(userInput)
+
+
+
+
 }
 
 
