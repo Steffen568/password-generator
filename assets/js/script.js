@@ -10,7 +10,7 @@ function generatePassword () {
   // Prompts asking password length and which chars to include
   let lengthInput = parseInt(prompt('Choose the length of your password. Please enter a number between 8 and 128'));
   if (lengthInput < 8 || lengthInput > 128) {
-    alert('Please enter a number between 8 and 128')
+    alert('Please enter a number between 8 and 128')  
   }  else {
     alert(`Your password will be ${lengthInput} charactors long`)
   }
@@ -21,7 +21,7 @@ function generatePassword () {
   let symbolInput = confirm('Would you like to include symbols? Confirm = YES, Cancel = NO.')
 
   // setting user inputs from confirm prompts to variables to be sent to array
-  let userInput = []
+  let userInput = ''
 
   if (lowerCaseInput) {
     userInput = userInput.concat(lowerCaseArr)
@@ -35,25 +35,29 @@ function generatePassword () {
   if (symbolInput) {
     userInput = userInput.concat(symbolArr)
   }
-
+  
   console.log(userInput)
+  
+  // FOR Loop to generate password with length from user input
+  let passwordArr = []
+  for (var i = 0; i < lengthInput; i++) {
+    var generatedPassword = random(userInput)
+    passwordArr.push(generatedPassword)
+  }
 
+  console.log(generatedPassword)
+  console.log(passwordArr)
 
+  return passwordArr.join('')
+
+  function random(array) {
+    return array[Math.floor(Math.random() * array.length)]
+  }
+
+  
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
