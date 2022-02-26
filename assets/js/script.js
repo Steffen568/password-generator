@@ -25,16 +25,16 @@ function generatePassword () {
 
   if (lowerCaseInput) {
     userInput = userInput.concat(lowerCaseArr)
-  }
+  } 
   if (upperCaseInput) {
     userInput = userInput.concat(upperCaseArr)
-  }
+  } 
   if (numberInput) {
     userInput = userInput.concat(numberArr)
-  }
+  } 
   if (symbolInput) {
     userInput = userInput.concat(symbolArr)
-  }
+  } 
   
   console.log(userInput)
   
@@ -48,20 +48,17 @@ function generatePassword () {
   console.log(generatedPassword)
   console.log(passwordArr)
 
-  return passwordArr.join('')
-
+  // function to randomize userInput variables
   function random(array) {
     return array[Math.floor(Math.random() * array.length)]
   }
 
-  
+  return passwordArr.join('')
+
+ }
 
 
-}
-
-
-
-var generateBtn = document.querySelector("#generate");
+ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
