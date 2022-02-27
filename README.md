@@ -11,4 +11,5 @@
 
 - Click the 'Generate Password' button.
 - Enter the desired length of your new password. Between 8 and 128 charactors
-- follow the prompts and choose the charactors you would like to include.
+- follow the prompts and choose the charactors you would like to include in your new password. You much choose at least 1 charactor set.
+- Your password will appear in the text box after completing the prompts. 
